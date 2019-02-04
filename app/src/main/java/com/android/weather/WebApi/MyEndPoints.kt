@@ -7,7 +7,11 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 import java.util.concurrent.TimeUnit
+
+//Api documentation can be found at: https://darksky.net/dev/docs#api-request-types
+
 
 interface MyEndPoints{
 
@@ -33,6 +37,6 @@ interface MyEndPoints{
     }
 
 
-    @GET("37.8267,-122.4233?exclude=minutely,hourly,daily,alerts,flags")
-    fun getCurrentWeatherData():  Call<Example>
+    @GET("{latitude}"+","+"{longitude}"+"?exclude=minutely,hourly,daily,alerts,flags")
+    fun getCurrentWeatherData(@Path("latitude") latitude:Double?, @Path("longitude")longitude:Double?):  Call<Example>
 }

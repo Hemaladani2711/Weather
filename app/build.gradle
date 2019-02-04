@@ -35,16 +35,15 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
-
-    //navigation version
-    def nav_version = "1.0.0-alpha11"
-    implementation "android.arch.navigation:navigation-fragment:$nav_version" // use -ktx for Kotlin
-    implementation "android.arch.navigation:navigation-ui:$nav_version" // use -ktx for Kotlin
-
-    def room_version = "2.1.0-alpha04"
+    //todo implement room database to store the data
+    /*def room_version = "2.1.0-alpha04"
 
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"*/
+
+    implementation "com.google.android.gms:play-services-location:16.0.0"
+
+
 
 
 }
